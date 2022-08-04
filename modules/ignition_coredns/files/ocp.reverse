@@ -1,0 +1,49 @@
+$ORIGIN .
+$TTL 604800;
+${cluster_domain}         IN SOA  ns1.${cluster_domain}. tcapicd01.${cluster_slug}.${cluster_domain}. (
+                                2011112904 ; serial
+                                3600         ; refresh (1 hour)
+                                600          ; retry (10 minutes)
+                                3600000      ; expire (42 days)
+                                86400        ; minimum (1 days)
+                                )
+
+  IN      NS      ns1.${cluster_domain}.
+
+5      IN    PTR    tcapicd01.${cluster_slug}.${cluster_domain}.
+108      IN    PTR    api.${cluster_slug}.${cluster_domain}.
+108      IN    PTR    api-int.${cluster_slug}.${cluster_domain}.
+;
+
+;113	IN	PTR	tcapib01.${cluster_slug}.${cluster_domain}. ;please check IP
+68      IN      PTR     tcapim01.${cluster_slug}.${cluster_domain}.
+69      IN      PTR     tcapim02.${cluster_slug}.${cluster_domain}.
+70      IN      PTR     tcapim03.${cluster_slug}.${cluster_domain}.
+71      IN      PTR     tcapii01.${cluster_slug}.${cluster_domain}.
+72      IN      PTR     tcapii02.${cluster_slug}.${cluster_domain}.
+73      IN      PTR     tcapii03.${cluster_slug}.${cluster_domain}.
+74      IN      PTR     tcapiaw01.${cluster_slug}.${cluster_domain}.
+75      IN      PTR     tcapiaw02.${cluster_slug}.${cluster_domain}.
+76      IN      PTR     tcapiaw03.${cluster_slug}.${cluster_domain}.
+77      IN      PTR     tcapiaw04.${cluster_slug}.${cluster_domain}.
+78      IN      PTR     tcapiaw05.${cluster_slug}.${cluster_domain}.
+79      IN      PTR     tcapiaw06.${cluster_slug}.${cluster_domain}.
+80      IN      PTR     tcapiiw01.${cluster_slug}.${cluster_domain}.
+81      IN      PTR     tcapiiw02.${cluster_slug}.${cluster_domain}.
+82      IN      PTR     tcapiiw03.${cluster_slug}.${cluster_domain}.
+83      IN      PTR     tcapimw01.${cluster_slug}.${cluster_domain}.
+84      IN      PTR     tcapimw02.${cluster_slug}.${cluster_domain}.
+85      IN      PTR     tcapimw03.${cluster_slug}.${cluster_domain}.
+87      IN      PTR     tcapics01.${cluster_slug}.${cluster_domain}.
+88      IN      PTR     tcapics02.${cluster_slug}.${cluster_domain}.
+89      IN      PTR     tcapics03.${cluster_slug}.${cluster_domain}.
+90      IN      PTR     tcapimf01.${cluster_slug}.${cluster_domain}.
+91      IN      PTR     tcapimf02.${cluster_slug}.${cluster_domain}.
+92      IN      PTR     tcapiapp01.${cluster_slug}.${cluster_domain}.
+93      IN      PTR     tcapiapp02.${cluster_slug}.${cluster_domain}.
+110     IN      PTR     tcapiapp03.${cluster_slug}.${cluster_domain}.
+111     IN      PTR     tcapiapp04.${cluster_slug}.${cluster_domain}.
+112     IN      PTR     tcapiapp05.${cluster_slug}.${cluster_domain}.
+;113     IN      PTR     tcapiapp06.${cluster_slug}.${cluster_domain}. ;please check IP
+
+

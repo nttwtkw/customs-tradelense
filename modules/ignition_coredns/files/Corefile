@@ -1,0 +1,15 @@
+ocp.customs.th:53 {
+    file /root/ocp.customs.th.db
+    log
+    errors
+}
+
+
+
+9.10.10.in-addr.arpa {
+    file /root/ocp.reverse
+    log
+    errors
+}
+
+

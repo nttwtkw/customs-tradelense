@@ -1,0 +1,65 @@
+$ORIGIN .
+$TTL 604800;
+${cluster_domain}         IN SOA  ns1.${cluster_domain}. tcbcdns01.${cluster_slug}.${cluster_domain}. (
+                                2011112904 ; serial
+                                3600         ; refresh (1 hour)
+                                600          ; retry (10 minutes)
+                                3600000      ; expire (42 days)
+                                86400        ; minimum (1 days)
+                                )
+                        NS      ns1.${cluster_domain}.
+$ORIGIN ${cluster_slug}.${cluster_domain}.
+ns1                     A       10.20.11.143
+
+api                     A       10.20.11.142
+api-int                 A       10.20.11.142
+*.apps                  A       10.20.11.142
+
+tcbcbst01	A	10.20.11.141 ;please use correct IP
+
+tcbcinst01	A       10.20.11.149
+
+tcbcdns01	A       10.20.11.143
+tcbclb01	A       10.20.11.142
+
+
+tcbcmast01 	A       10.20.11.132
+tcbcmast02	A       10.20.11.138
+tcbcmast03	A       10.20.11.146
+
+tcbcinfa01	A       10.20.11.133
+tcbcinfa02	A       10.20.11.139
+tcbcinfa03	A       10.20.11.147
+
+tcbcwkn01       A       10.20.11.154
+tcbcwkn02       A       10.20.11.161
+tcbcwkn03       A       10.20.11.168
+tcbcwkn04       A       10.20.11.155
+tcbcwkn05       A       10.20.11.162
+tcbcwkn06       A       10.20.11.169
+tcbcwkn07       A       10.20.11.156
+tcbcwkn08       A       10.20.11.163
+tcbcwkn09       A       10.20.11.170
+tcbcwkn10       A       10.20.11.134
+tcbcwkn11       A       10.20.11.140
+tcbcwkn12       A       10.20.11.148
+tcbcwkn13       A       10.20.11.152
+tcbcwkn14       A       10.20.11.159
+tcbcwkn15       A       10.20.11.166
+tcbcwkn16       A       10.20.11.153
+tcbcwkn17       A       10.20.11.160
+tcbcwkn18       A       10.20.11.167
+
+
+
+etcd-tcapim01        A       10.20.11.132
+etcd-tcapim02        A       10.20.11.138
+etcd-tcapim03        A       10.20.11.146
+
+oauth-openshift.apps                   A       10.20.11.142
+console-openshift-console.apps         A       10.20.11.142
+
+_etcd-server-ssl._tcp    86400        SRV     0    10    2380    etcd-0
+_etcd-server-ssl._tcp    86400        SRV     0    10    2380    etcd-1
+_etcd-server-ssl._tcp    86400        SRV     0    10    2380    etcd-2
+

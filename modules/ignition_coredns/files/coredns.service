@@ -1,0 +1,22 @@
+[Unit]
+Description=coredns
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+TimeoutStartSec=0
+Environment="HTTP_PROXY=http://920181:zxcvbnm@10.10.25.25:3128"
+Environment="https_proxy=http://920181:zxcvbnm@10.10.25.25:3128"
+Environment="http_proxy=http://920181:zxcvbnm@10.10.25.25:3128"
+Environment="HTTPS_PROXY=http://920181:zxcvbnm@10.10.25.25:3128"
+ExecStartPre=-/bin/podman kill coredns
+ExecStartPre=-/bin/podman rm coredns
+ExecStartPre=-/bin/podman pull quay.io/openshift/origin-coredns
+ExecStart=/bin/podman run --name coredns \
+  --net=host \
+  --privileged \
+  -v /opt/coredns/:/root/:Z \
+  quay.io/openshift/origin-coredns -conf /root/Corefile
+
+[Install]
+WantedBy=multi-user.target

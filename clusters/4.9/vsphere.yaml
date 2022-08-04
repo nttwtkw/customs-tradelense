@@ -1,0 +1,5 @@
+vsphere-user: ekyc@vsphere.local
+vsphere-password: "P@ssw0rd@ekyc"
+vsphere-server: 10.100.77.181
+vsphere-dc: SSO
+vsphere-cluster: SSO_Cluster
